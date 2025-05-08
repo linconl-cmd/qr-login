@@ -1,54 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Login Wi-Fi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e0f7fa;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .login-container {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    input[type="text"],
-    input[type="password"] {
-      width: 80%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #004d40;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Login Cliente</title>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login do Cliente</h2>
-    <form action="https://drive.google.com/uc?export=view&id=15j5ZfOzSiXUD7JhUHKkiuTxYxv-pb2FI" method="GET">
-      <input type="text" name="username" value="cliente" placeholder="Usuário"><br>
-      <input type="password" name="password" value="cliente" placeholder="Senha"><br>
-      <button type="submit">Entrar</button>
-    </form>
-  </div>
+  <h1>Login Wi-Fi do Laboratório</h1>
+  <form onsubmit="redirectToImage(event)">
+    <input type="text" value="cliente" readonly />
+    <input type="password" value="cliente" readonly />
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    function redirectToImage(event) {
+      event.preventDefault();
+      window.location.href = "https://drive.google.com/uc?export=view&id=15j5ZfOzSiXUD7JhUHKkiuTxYxv-pb2FI";
+    }
+  </script>
 </body>
 </html>
