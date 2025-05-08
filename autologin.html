@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Automático</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4c3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .loading {
+      margin-top: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body onload="document.getElementById('loginForm').submit();">
+  <div class="container">
+    <h2>Conectando...</h2>
+    <p class="loading">Efetuando login automático no Wi-Fi.</p>
+    <form id="loginForm" action="https://drive.google.com/uc?export=view&id=15j5ZfOzSiXUD7JhUHKkiuTxYxv-pb2FI" method="GET">
+      <input type="hidden" name="username" value="cliente">
+      <input type="hidden" name="password" value="cliente">
+    </form>
+  </div>
+</body>
+</html>
